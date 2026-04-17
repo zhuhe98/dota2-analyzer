@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dota 2 Replay Analyzer - Heatmaps</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <aside id="sidebar">
+            <h1 class="brand">Dota 2 Analyzer <span class="highlight">Pro</span></h1>
+            
+            <div class="panel">
+                <h2>Match Info</h2>
+                <div id="match-meta" class="meta-box">Loading...</div>
+            </div>
+
+            <div class="panel">
+                <h2>Select Player</h2>
+                <div id="player-list">
+                    <!-- Dynamic player list -->
+                </div>
+            </div>
+
+            <div class="panel summary-panel">
+                <h2>Coaching Analysis</h2>
+                <p class="coach-text" id="coach-text">Select a player to view trajectory and performance metrics.</p>
+            </div>
+        </aside>
+
+        <main id="main-content">
+            <div class="map-container" id="map-container">
+                <!-- Fallback minimap from CDN -->
+                <img id="minimap-img" src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/minimap_733.png" crossorigin="anonymous" alt="Dota 2 Minimap">
+                <canvas id="heatmap-canvas" width="1024" height="1024"></canvas>
+                <div id="loading-overlay" class="overlay hidden">Loading Heatmap...</div>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

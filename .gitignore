@@ -1,0 +1,23 @@
+# 编译产物
+*.exe
+b.exe
+
+# 录像文件（体积大，不上传）
+replay/
+*.dem
+
+# 生成的数据文件（本地运行生成）
+output.json
+resource.json
+gamerules.json
+hero.json
+web/output.json
+
+# Python
+__pycache__/
+*.pyc
+.env
+
+# 系统文件
+.DS_Store
+Thumbs.db
